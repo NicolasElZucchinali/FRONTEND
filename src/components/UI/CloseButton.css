@@ -1,0 +1,48 @@
+
+.close {
+  width: 4rem;
+  height: 4rem;
+  position: relative;
+  margin:  0 0 0 1rem ;
+  cursor: pointer;
+}
+
+.close span {
+  display: block;
+  position: absolute;
+  height: 0.5rem;
+  width: 4rem;
+  background: #d3531a;
+  border-radius: 0.5rem;
+  opacity: 1;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+
+.close span:nth-child(1) {
+  top: 17.5%;
+  transform-origin: top left;
+}
+
+.close span:nth-child(2) {
+  top: 50%;
+  transform-origin: center;
+}
+
+.close span:nth-child(3) {
+  top: 82.5%;
+  transform-origin: bottom left;
+}
+
+.close:hover span:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+.close:hover span:nth-child(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+.close:hover span:nth-child(3) {
+  transform: rotate(-45deg);
+}

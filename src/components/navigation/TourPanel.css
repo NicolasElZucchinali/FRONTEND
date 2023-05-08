@@ -1,0 +1,13 @@
+.panel {
+  height: 95%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #666666;
+  z-index: 10;
+  display: flex;
+  position: absolute;
+}
+
+

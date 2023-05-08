@@ -1,0 +1,19 @@
+.new-panorama {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  border-radius: 1rem;
+}
+
+.new-panorama:hover{
+  background-color: #333333;
+}
+
+.nuovo {
+  width: 5rem;
+  height: 5rem;
+}

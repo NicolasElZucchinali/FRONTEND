@@ -1,0 +1,21 @@
+.center{
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: 100%;
+  width: 40%;
+}
+
+.logo{
+  width: 15rem;
+  height: 15rem;
+  display: block;
+  margin: 0 auto;
+}
+
+.eduverso {
+  height: 0.5rem;
+  font-size: 2rem;
+  font-weight: bold;
+}
