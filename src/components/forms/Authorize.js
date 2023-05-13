@@ -1,5 +1,6 @@
 import { useGoogleLogin } from '@react-oauth/google';
 
+
 import Cookies from 'js-cookie';
 
 
@@ -8,7 +9,7 @@ function Authorize(){
 
     
 
-    const GoogleLogin = ()=>{
+    const GoogleLogin = 
         useGoogleLogin({
         flow: 'auth-code',
         access_type: "offline",
@@ -19,7 +20,7 @@ function Authorize(){
             handleAuthNetCore(codeResponse.code);
         },
         onError: errorResponse => console.log(errorResponse),
-    })};
+    });
 
     
     
