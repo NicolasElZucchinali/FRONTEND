@@ -3,7 +3,7 @@ import HotspotList from "../UI/HotspotList";
 import './SideBar.css';
 
 const SideBar = () => {
-  const addHotspot = useHotspotStore((state) => state.addHotspot);
+  const aggiungi = useHotspotStore((state) => state.addHotspot);
 
   const filePicker = (event) => {
     const URL = window.URL || window.webkitURL;
@@ -14,7 +14,7 @@ const SideBar = () => {
       const fileUrl = URL.createObjectURL(file);
       img.src = fileUrl;
         img.onload = () => {
-          addHotspot(fileUrl, file.name, img.width, img.height, [0, 0, 0], [0, Math.PI/2, 0]);
+          aggiungi(fileUrl, file.name, img.width, img.height, [0, 0, 0], [0, Math.PI/2, 0]);
         }    
     }
   }

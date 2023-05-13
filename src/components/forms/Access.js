@@ -31,11 +31,9 @@ const Access= () => {
           <img className="line" alt="line" src="/img/linea.png" />
         </div>
 
-        {/* {profilo && <Profilo></Profilo>}
-        <Input profiloHandler={profiloClick}/> */}
+        
 
                     <GoogleOAuthProvider clientId={clientID} >
-                        {/* <Login/> */}
                         {!auth && <Login authHandler={authClick}></Login>}
                         {auth && <Authorize></Authorize>}
                     </GoogleOAuthProvider>

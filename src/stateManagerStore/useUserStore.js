@@ -6,9 +6,10 @@ const useUserStore = create((set) => ({
   isLoggedIn: false,
   userID: null,
   email: null,
+  name:null,
   profilePicture: null,
-  login : (userID, email, profilePicture) => set({ isLoggedIn: true, userID: userID, email: email, profilePicture: profilePicture}),
-  logout : () => set({ isLoggedIn: false, userID: null, email: null, profilePicture: null}),
+  login : (userID, name, email, profilePicture) => set({ isLoggedIn: true, userID: userID, name:name, email: email, profilePicture: profilePicture}),
+  logout : () => set({ isLoggedIn: false, userID: null, name:null, email: null, profilePicture: null}),
 }));
 
 export default useUserStore;

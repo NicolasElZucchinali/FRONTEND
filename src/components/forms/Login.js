@@ -1,10 +1,13 @@
 import React from "react";
 import { GoogleLogin } from '@react-oauth/google';
 import Cookies from 'js-cookie';
+import useUserStore from "../../stateManagerStore/useUserStore"
 
 
 
 function Login(props){
+
+    const userCred = useUserStore((state)=> state.login)
 
     const onFailure = (res) => {
         console.log("LOGIN FAILED! res: ", res);
@@ -44,20 +47,13 @@ function Login(props){
                 } */
                 
                 var parsed = JSON.parse(res["userlogin"]);
-
+                console.log(parsed);
+                
+                userCred(parsed.UserId,parsed.UserName, parsed.UserEmail, parsed.UserPicturePath)
+                
                 Cookies.set('uid',  parsed["UserId"],  {secure: true, sameSite: 'None'} );
                 Cookies.set('auth', parsed["EduversoToken"],  {secure: true, sameSite: 'None'});
-                
-
-                //DO REDIRECTION HERE
-                  
             }) 
-
-            
-            //THIS REDIRECTION NOT WORKING
-            /* .then(
-                window.location.href = '/askpermission'
-            ); */
     }
     
 
